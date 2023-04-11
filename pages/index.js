@@ -228,8 +228,7 @@ export async function getServerSideProps({ req }) {
   const PK_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%23RCP8GLP';
 
   // api key
-  const access_token =
-    'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjE2MmU3N2FjLTM3NmYtNDc4ZS04NDI5LWRmYzIzOWRiNTAxYSIsImlhdCI6MTY4MTI0NTQwNSwic3ViIjoiZGV2ZWxvcGVyLzQzNzE0NDQxLTA0ZDItNDVkZS1hY2VlLWIzMzgxYTYxMTE0ZiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDUuNzkuMjE4Ljc5Il0sInR5cGUiOiJjbGllbnQifV19.17oyTX3fmamYev8IBG8dQQfuErHJb8yi6gmtjxNNxG7PUtSuppTOB5WCgBweiWKMZt_7i0HzKMifdGxcI0arsw';
+  const access_token = process.env.API_KEY;
 
   const response = await fetch(TARIQ_ENDPOINT, {
     headers: {
