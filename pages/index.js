@@ -12,17 +12,15 @@ const Home = (data) => {
   let sudData = data.sudData;
   let pranavData = data.pranavData;
 
-  console.log(tariqData);
-
   function checkHours(person) {
     let duoVictories = person.duoVictories;
     let soloVictories = person.soloVictories;
-    let threeVictories = person["3vs3Victories"];
+    let threeVictories = person['3vs3Victories'];
     let totalTime = soloVictories + duoVictories + threeVictories;
-    let numMinutes = (totalTime * 3) + (totalTime * 3 * 0.3);
+    let numMinutes = (totalTime * 2.6) + (totalTime * 1 * 0.3);
     const hours = Math.floor(numMinutes / 60);
     const minutes = Math.round(numMinutes % 60);
-    let formatTime = hours + " hours";
+    let formatTime = hours + ' hours';
     return formatTime;
   }
 
@@ -139,7 +137,7 @@ const Home = (data) => {
       imageUrl:
         'https://brawlstars.b-cdn.net/wp-content/uploads/2022/05/brawl-stars-true-gold-spike.png',
       hours: tariqHours,
-      sweat: "for fun"
+      sweat: 'for fun',
     },
     {
       name: 'jace',
@@ -147,7 +145,7 @@ const Home = (data) => {
       imageUrl:
         'https://www.brawlstarsarena.com/wp-content/uploads/2020/10/BSA_avatar_True_Gold_Leon.png',
       hours: jaceHours,
-      sweat: "play all day"
+      sweat: 'play all day',
     },
     {
       name: 'pranav',
@@ -155,7 +153,7 @@ const Home = (data) => {
       imageUrl:
         'https://www.brawlstarsarena.com/wp-content/uploads/2020/10/BSA_avatar_Sakura_Spike.png',
       hours: pranavHours,
-      sweat: "dripping"
+      sweat: 'dripping',
     },
     {
       name: 'sud',
@@ -163,7 +161,7 @@ const Home = (data) => {
       imageUrl:
         'https://www.brawlstarsarena.com/wp-content/uploads/2020/10/BSA_avatar_El_Primo.png',
       hours: sudHours,
-      sweat: "for fun"
+      sweat: 'for fun',
     },
     // More people...
   ];
@@ -199,8 +197,12 @@ const Home = (data) => {
                 <p className='text-sm leading-6 text-gray-600'>
                   win percentage: {(person.winCount / 25) * 100}%
                 </p>
-                <p className='text-sm leading-6 text-gray-600'>hours spent: {person.hours}</p>
-                <p className='text-sm leading-6 text-gray-600'>sweat status: {person.sweat}</p>
+                <p className='text-sm leading-6 text-gray-600'>
+                  hours spent: {person.hours}
+                </p>
+                <p className='text-sm leading-6 text-gray-600'>
+                  sweat status: {person.sweat}
+                </p>
               </li>
             ))}
           </ul>
@@ -222,8 +224,10 @@ export async function getServerSideProps({ req }) {
     'https://bsproxy.royaleapi.dev/v1/players/%23RCP8GLP/battlelog';
 
   // standard player endpoints
-  const TARIQ_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%23JRCU2J9';
-  const JACE_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%2328LJLOYJ8';
+  const TARIQ_PL_ENDPOINT =
+    'https://bsproxy.royaleapi.dev/v1/players/%23JRCU2J9';
+  const JACE_PL_ENDPOINT =
+    'https://bsproxy.royaleapi.dev/v1/players/%2328LJLOYJ8';
   const PK_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%232OLLRGYQ';
   const SUD_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%23RCP8GLP';
 
