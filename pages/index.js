@@ -155,7 +155,7 @@ const Home = (data) => {
       imageUrl:
         'https://www.brawlstarsarena.com/wp-content/uploads/2020/10/BSA_avatar_Sakura_Spike.png',
       hours: pranavHours,
-      sweat: "sweat"
+      sweat: "dripping"
     },
     {
       name: 'sud',
@@ -224,8 +224,8 @@ export async function getServerSideProps({ req }) {
   // standard player endpoints
   const TARIQ_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%23JRCU2J9';
   const JACE_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%2328LJLOYJ8';
-  const SUD_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%232OLLRGYQ';
-  const PK_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%23RCP8GLP';
+  const PK_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%232OLLRGYQ';
+  const SUD_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%23RCP8GLP';
 
   // api key
   const access_token = process.env.API_KEY;
