@@ -213,23 +213,23 @@ const Home = (data) => {
 export async function getServerSideProps({ req }) {
   // battle-log endpoints
   const TARIQ_ENDPOINT =
-    'https://api.brawlstars.com/v1/players/%23JRCU2J9/battlelog';
+    'https://bsproxy.royaleapi.dev/v1/players/%23JRCU2J9/battlelog';
   const JACE_ENDPOINT =
-    'https://api.brawlstars.com/v1/players/%2328LJLOYJ8/battlelog';
+    'https://bsproxy.royaleapi.dev/v1/players/%2328LJLOYJ8/battlelog';
   const SUD_ENDPOINT =
-    'https://api.brawlstars.com/v1/players/%232OLLRGYQ/battlelog';
+    'https://bsproxy.royaleapi.dev/v1/players/%232OLLRGYQ/battlelog';
   const PK_ENDPOINT =
-    'https://api.brawlstars.com/v1/players/%23RCP8GLP/battlelog';
+    'https://bsproxy.royaleapi.dev/v1/players/%23RCP8GLP/battlelog';
 
   // standard player endpoints
-  const TARIQ_PL_ENDPOINT = 'https://api.brawlstars.com/v1/players/%23JRCU2J9';
-  const JACE_PL_ENDPOINT = 'https://api.brawlstars.com/v1/players/%2328LJLOYJ8';
-  const SUD_PL_ENDPOINT = 'https://api.brawlstars.com/v1/players/%232OLLRGYQ';
-  const PK_PL_ENDPOINT = 'https://api.brawlstars.com/v1/players/%23RCP8GLP';
+  const TARIQ_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%23JRCU2J9';
+  const JACE_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%2328LJLOYJ8';
+  const SUD_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%232OLLRGYQ';
+  const PK_PL_ENDPOINT = 'https://bsproxy.royaleapi.dev/v1/players/%23RCP8GLP';
 
   // api key
   const access_token =
-    'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjZlOTJlYjI2LWZmYzgtNDYwMy04NTdiLTI3ZTgxYzZjMzMyYSIsImlhdCI6MTY4MTExMTIwMywic3ViIjoiZGV2ZWxvcGVyLzQzNzE0NDQxLTA0ZDItNDVkZS1hY2VlLWIzMzgxYTYxMTE0ZiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiMTY0LjY3LjIxLjIzNCJdLCJ0eXBlIjoiY2xpZW50In1dfQ.h1fZQnqfPzWTXVwT595Was086JcNC6Vy_aOeGS3bhZb1ZGj1beRcL63HekAdLx_hP-gpvqn2_XcHYETWUyzeFQ';
+    'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiIsImtpZCI6IjI4YTMxOGY3LTAwMDAtYTFlYi03ZmExLTJjNzQzM2M2Y2NhNSJ9.eyJpc3MiOiJzdXBlcmNlbGwiLCJhdWQiOiJzdXBlcmNlbGw6Z2FtZWFwaSIsImp0aSI6IjE2MmU3N2FjLTM3NmYtNDc4ZS04NDI5LWRmYzIzOWRiNTAxYSIsImlhdCI6MTY4MTI0NTQwNSwic3ViIjoiZGV2ZWxvcGVyLzQzNzE0NDQxLTA0ZDItNDVkZS1hY2VlLWIzMzgxYTYxMTE0ZiIsInNjb3BlcyI6WyJicmF3bHN0YXJzIl0sImxpbWl0cyI6W3sidGllciI6ImRldmVsb3Blci9zaWx2ZXIiLCJ0eXBlIjoidGhyb3R0bGluZyJ9LHsiY2lkcnMiOlsiNDUuNzkuMjE4Ljc5Il0sInR5cGUiOiJjbGllbnQifV19.17oyTX3fmamYev8IBG8dQQfuErHJb8yi6gmtjxNNxG7PUtSuppTOB5WCgBweiWKMZt_7i0HzKMifdGxcI0arsw';
 
   const response = await fetch(TARIQ_ENDPOINT, {
     headers: {
